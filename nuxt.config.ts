@@ -24,5 +24,37 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   ssr: false,
-  modules: ['@element-plus/nuxt'],
+  modules: ['usebootstrap'],
+  usebootstrap: {
+    scss: true,
+    image: false,
+    fonts: false,
+    sitemap: false,
+    robots: true,
+    shiki: false,
+    leaflet: false,
+    mdc: false,
+    tiptap: false,
+    pwa: false,
+    aos: false,
+    echarts: false,
+   },
+   build: {
+    analyze: true,
+    transpile: ['bootstrap'],
+  },
+  webpack: {
+    optimizeCSS: true,
+    optimization: {
+      chunkIds: 'named',
+      mergeDuplicateChunks: true,
+      nodeEnv: 'production',
+      CommonsChunk: {
+        name: 'commons',
+        filename: 'commons.js',
+        async: true,
+      },
+      minimize: true,
+    },
+  },
 })

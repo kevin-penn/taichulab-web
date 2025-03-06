@@ -1,8 +1,8 @@
 <template>
     <div>
-      <nav className="bg-gray-900 p-4 flex justify-center">
+      <nav className="p-4 flex justify-center">
         <div className="w-full max-w-7xl">
-          Solution
+          <h2>Social Experiment Cooming Soon...</h2>
         </div>
       </nav>
     </div>
